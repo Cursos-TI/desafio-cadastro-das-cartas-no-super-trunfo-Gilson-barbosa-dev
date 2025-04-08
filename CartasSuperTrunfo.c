@@ -2,9 +2,10 @@
 
 int main()
 {
-    int populacao, pontos;
+    int pontos;
     char codigo[20], cidade[255], estado[20];
-    float area, pib, resultadoPopulacao, resultadoPibPercapita;
+    float area, pib, resultadoPopulacao, resultadoPibPercapita, superPoder, resultadoInversoPopulacao;
+    unsigned long int populacao;
 
     // Carta 1
     printf("Digite a letra que representa o Estado: ");
@@ -22,11 +23,17 @@ int main()
     printf("Digite os Pontos Turísticos: ");
     scanf("%d", &pontos);
 
-    // Calcular a Densidade
+    // Calcular a Densidade da carta 1
     resultadoPopulacao = (float)populacao / area;
 
-    // Calculoar Pib per Capita
+    // Inverso da Densidade da carta 1
+    resultadoInversoPopulacao = (float)area / populacao;
+
+    // Calculoar Pib per Capita da carta 1
     resultadoPibPercapita = (float)pib / populacao;
+
+    // Calcular o super poder da carta 1
+    superPoder = (float)populacao + area + pib + pontos + resultadoPibPercapita + resultadoInversoPopulacao;
 
     // Resultado carta 1
     printf("\nInformações da carta 1 cadastrada abaixo: \n");
@@ -40,6 +47,8 @@ int main()
     printf("Número de Pontos Turísticos: %d \n", pontos);
     printf("Densidade populacional: %.2f hab/km² \n", resultadoPopulacao);
     printf("Pib per Capita: %.3f reais \n", resultadoPibPercapita);
+
+    printf("Super poder carta 1: %.2f", superPoder);
 
     // Carta 2
     printf("\nDigite a letra que representa o Estado: ");
@@ -57,11 +66,17 @@ int main()
     printf("Digite os Pontos Turísticos: ");
     scanf("%d", &pontos);
 
-    // Calcular a Densidade
+    // Calcular a Densidade da carta 2
     resultadoPopulacao = (float)populacao / area;
 
-    // Calculoar Pib per Capita
+    // Inverso da Densidade  da carta 2
+    resultadoInversoPopulacao = (float)area / populacao;
+
+    // Calculoar Pib per Capita da carta 2
     resultadoPibPercapita = (float)pib / populacao;
+
+    // Calcular o super poder da carta 2
+    superPoder = (float)populacao + area + pib + pontos + resultadoPibPercapita + resultadoInversoPopulacao;
 
     // Resultado carta 2
     printf("\n\nInformações da carta 2 cadastrada abaixo: \n");
@@ -75,6 +90,8 @@ int main()
     printf("Número de Pontos Turísticos: %d \n", pontos);
     printf("Densidade populacional: %.2f hab/km² \n", resultadoPopulacao);
     printf("Pib per Capita: %.3f reais \n", resultadoPibPercapita);
+
+    printf("Super poder carta 2: %.2f", superPoder);
 
     return 0;
 }
