@@ -34,8 +34,8 @@ int main()
     // Inverso da Densidade da carta 1
     resultadoInversoPopulacaoCarta1 = (float)areaCarta1 / populacaoCarta1;
 
-    //Calcular Pib per Capita da carta 1 
-    
+    // Calcular Pib per Capita da carta 1
+
     resultadoPibPercapitaCarta1 = (float)pibCarta1 / populacaoCarta1;
 
     // Calcular o super poder da carta 1
@@ -95,17 +95,33 @@ int main()
     printf("Densidade populacional: %.2f hab/km² \n", resultadoPopulacaoCarta2);
     printf("Pib per Capita: %.3f reais \n", resultadoPibPercapitaCarta2);
 
-    // Array com textos para indexar pelo resultado (0 ou 1)
-    char *vencedor[2] = {"Carta 2 venceu (0)", "Carta 1 venceu (1)"};
+    /*
+        Lógica anterior de carta vencedora
 
-    // Resultado carta vencedora
-    printf("\n\nComparação das cartas: \n");
-    printf("Área: %s\n", vencedor[areaCarta1 > areaCarta2]);
-    printf("PIB: %s\n", vencedor[pibCarta1 > pibCarta2]);
-    printf("Pontos Turísticos: %s\n", vencedor[pontosCarta1 > pontosCarta2]);
-    printf("Densidade Populacional: %s\n", vencedor[resultadoPopulacaoCarta1 > resultadoPopulacaoCarta2]);
-    printf("PIB per Capita: %s\n", vencedor[resultadoPibPercapitaCarta1 > resultadoPibPercapitaCarta2]);
-    printf("Super Poder: %s\n", vencedor[superPoderCarta1 > superPoderCarta2]);
+        // Array com textos para indexar pelo resultado (0 ou 1)
+        char *vencedor[2] = {"Carta 2 venceu (0)", "Carta 1 venceu (1)"};
+
+        // Resultado carta vencedora
+        printf("\n\nComparação das cartas: \n");
+        printf("Área: %s\n", vencedor[areaCarta1 > areaCarta2]);
+        printf("PIB: %s\n", vencedor[pibCarta1 > pibCarta2]);
+        printf("Pontos Turísticos: %s\n", vencedor[pontosCarta1 > pontosCarta2]);
+        printf("Densidade Populacional: %s\n", vencedor[resultadoPopulacaoCarta1 > resultadoPopulacaoCarta2]);
+        printf("PIB per Capita: %s\n", vencedor[resultadoPibPercapitaCarta1 > resultadoPibPercapitaCarta2]);
+        printf("Super Poder: %s\n", vencedor[superPoderCarta1 > superPoderCarta2]);
+    */
+
+    // Carta vencedora por if e else:
+
+    printf("A carta vencedora foi: \n");
+    if (pibCarta1 > pibCarta2)
+    {
+        printf("\nA carta 1 venceu com o maior PIB %.2f\n", pibCarta1);
+    }
+    else
+    {
+        printf("\nA carta 2 venceu com o maior PIB %.2f\n", pibCarta2);
+    }
 
     return 0;
 }
