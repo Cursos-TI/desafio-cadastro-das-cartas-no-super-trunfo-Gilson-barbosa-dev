@@ -113,14 +113,18 @@ int main()
 
     // Carta vencedora por if e else:
 
-    printf("A carta vencedora foi: \n");
+    printf("\nComparação de cartas (Atributo: Pib): \n");
     if (pibCarta1 > pibCarta2)
     {
-        printf("\nA carta 1 venceu com o maior PIB %.2f\n", pibCarta1);
+        printf("\nCarta 1 - %s (%s): R$ %.2f\n", cidadeCarta1, estadoCarta1, pibCarta1);
+        printf("Carta 2 - %s (%s): R$ %.2f\n", cidadeCarta2, estadoCarta2, pibCarta2);
+        printf("\nResultado: Carta 1 (%s) venceu! \n", cidadeCarta1);
     }
     else
     {
-        printf("\nA carta 2 venceu com o maior PIB %.2f\n", pibCarta2);
+        printf("\nCarta 1 - %s (%s): R$ %.2f\n", cidadeCarta1, estadoCarta1, pibCarta1);
+        printf("\nCarta 2 - %s (%s): R$ %.2f\n", cidadeCarta2, estadoCarta2, pibCarta2);
+        printf("\nResultado: Carta 2 (%s) venceu! \n", cidadeCarta2);
     }
 
     return 0;
