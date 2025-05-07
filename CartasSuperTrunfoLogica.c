@@ -160,6 +160,10 @@ int main()
         break;
     }
 
+    return 0;
+
+}
+
     // Carta vencedora por if e else:
 
     /*
@@ -178,10 +182,6 @@ int main()
         printf("\nResultado: Carta 2 (%s) venceu! \n", cidadeCarta2);
     }
 
-
-*/
-    return 0;
-    /*
 
     Lógica anterior de carta vencedora
 
@@ -213,4 +213,3 @@ int main()
     printf("PIB per Capita: %s\n", vencedor[resultadoPibPercapitaCarta1 > resultadoPibPercapitaCarta2]);
     printf("Super Poder: %s\n", vencedor[superPoderCarta1 > superPoderCarta2]);
     */
-}
